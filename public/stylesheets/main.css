@@ -1,0 +1,18 @@
+.navContainer{
+    overflow: hidden;
+}
+
+.nav-item a {
+    color: rgb(65, 65, 65)
+}
+
+.login-form , .signup-form{
+    margin-top: 85px
+}
+
+.message{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -80px;
+}

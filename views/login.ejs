@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <% include partials/cdns %>
+    <title><%= title %></title>
+</head>
+<body>
+    <% include partials/nav %>
+    <form action="http://localhost:3000/login" method="POST" class="container mt-3">
+        <div class="card col-md-6 offset-md-3 login-form">
+            <div class="card-body ">
+                <% if(message.length > 0) {%>
+                    <div class="message">
+                        <p class="alert alert-success text-center" role="alert">
+                            <%= message %>
+                        </p>
+                    </div>
+                <%}%>
+                <h1 class="text-center">LogIn</h1>
+                <div class="from-group text-center">
+    
+                    <label for="email"></label>
+                    <input type="email" class="form-control" name="username" id="email" placeholder="Email" required>
+    
+                    <label for="password"></label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                    <hr>
+    
+                    <input type="submit" id="login-form" class="btn btn-success " value="Enter">
+                </div>
+            </div>
+        </div>
+    </form>
+    <% include partials/scripts %>
+</body>
+</html>
